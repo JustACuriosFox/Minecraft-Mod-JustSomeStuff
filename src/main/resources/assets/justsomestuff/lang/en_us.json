@@ -1,0 +1,13 @@
+{
+  "item.justsomestuff.beer": "Beer",
+  "item.justsomestuff.hops.tooltip": " §7Doesn't do much on its own and doesn't even taste good either.§r",
+  "effect.justsomestuff.alcohol_poisoning": "Alcohol Poisoning",
+  "item.justsomestuff.hop_juice": "Hop Juice",
+  "item.justsomestuff.hops": "Hops",
+  "item.justsomestuff.reaping_sword": "Reaper's Scythe",
+  "itemGroup.justsomestuff.weapons": "JustSomeStuff Weapons",
+  "itemGroup.justsomestuff.alcohol": "JustSomeStuff Alcohol",
+  "enchantment.justsomestuff.affecting": "Affecting",
+  "enchantment.justsomestuff.lifesteal": "Lifesteal",
+  "enchantment.justsomestuff.yeet": "Yeet"
+}

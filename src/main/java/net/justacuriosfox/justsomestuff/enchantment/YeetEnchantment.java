@@ -1,0 +1,54 @@
+package net.justacuriosfox.justsomestuff.enchantment;
+
+import net.justacuriosfox.justsomestuff.item.ModItems;
+import net.minecraft.enchantment.Enchantment;
+import net.minecraft.enchantment.EnchantmentTarget;
+import net.minecraft.entity.Entity;
+import net.minecraft.entity.EquipmentSlot;
+import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.effect.StatusEffectInstance;
+import net.minecraft.item.ItemStack;
+import net.minecraft.util.math.Vec3d;
+
+import java.util.Collection;
+
+public class YeetEnchantment extends Enchantment {
+    protected YeetEnchantment(Rarity weight, EnchantmentTarget type, EquipmentSlot... slotTypes) {
+        super(weight, type, slotTypes);
+    }
+
+    @Override
+    public void onTargetDamaged(LivingEntity user, Entity target, int level) {
+        if (!user.world.isClient()) {
+            LivingEntity Ltarget = (LivingEntity) target;
+            Ltarget.setVelocity(new Vec3d(Ltarget.getVelocity().x, .5*level, Ltarget.getVelocity().z));
+        }
+
+        super.onTargetDamaged(user, target, level);
+    }
+
+    @Override
+    public boolean isAcceptableItem(ItemStack stack) {
+        if (stack.isOf(ModItems.REAPING_SWORD)){
+            return super.isAcceptableItem(stack);
+        }
+        else {
+            return false;
+        }
+    }
+
+    @Override
+    public boolean isAvailableForEnchantedBookOffer() {
+        return false;
+    }
+
+    @Override
+    public boolean isAvailableForRandomSelection() {
+        return false;
+    }
+
+    @Override
+    public int getMaxLevel() {
+        return 3;
+    }
+}

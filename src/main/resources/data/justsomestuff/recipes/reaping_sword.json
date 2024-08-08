@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "G#G",
+    "#O#",
+    "SOS"
+  ],
+  "key": {
+    "O": {
+      "item": "minecraft:stick"
+    },
+    "#": {
+      "item": "minecraft:netherite_ingot"
+    },
+    "G": {
+      "item": "minecraft:diamond"
+    },
+    "S": {
+      "item": "minecraft:end_crystal"
+    }
+  },
+  "result": {
+    "item": "justsomestuff:reaping_sword"
+  }
+}
