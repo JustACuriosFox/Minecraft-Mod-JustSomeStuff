@@ -21,13 +21,11 @@ public class ModBeerItem extends Item{
 
         user.playSound(SoundEvents.ENTITY_GENERIC_DRINK, 1f, 0.7f);
         if (user.hasStatusEffect(ModEffects.ALCOHOL_POISONING)) {
-            user.sendMessage(new LiteralText("used Item with effect"), true);
             int EffectAmplifier = Objects.requireNonNull(user.getStatusEffect(ModEffects.ALCOHOL_POISONING)).getAmplifier();
             user.addStatusEffect(new StatusEffectInstance(ModEffects.ALCOHOL_POISONING,
                     10,
                     EffectAmplifier + 1));
         } else {
-            user.sendMessage(new LiteralText("used Item without effect"), true);
             user.addStatusEffect(new StatusEffectInstance(ModEffects.ALCOHOL_POISONING, 10, 1));
         }
 

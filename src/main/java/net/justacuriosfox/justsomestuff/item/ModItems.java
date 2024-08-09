@@ -14,7 +14,7 @@ import net.minecraft.util.registry.Registry;
 
 public class ModItems {
     public static final ReapingSwordItem REAPING_SWORD = (ReapingSwordItem) registerItem("reaping_sword",
-            new ReapingSwordItem(ToolMaterials.NETHERITE, 0, -2.4F, new FabricItemSettings()
+            new ReapingSwordItem(ToolMaterials.NETHERITE, 7, -2.4F, new FabricItemSettings()
                     .maxCount(1)
                     .fireproof()
                     .group(ModItemGroup.WEAPONS)
