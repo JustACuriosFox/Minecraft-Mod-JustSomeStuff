@@ -28,6 +28,7 @@ public class ModBeerItem extends Item{
         } else {
             user.addStatusEffect(new StatusEffectInstance(ModEffects.ALCOHOL_POISONING, 10, 1));
         }
+        user.getStackInHand(hand).decrement(1);
 
         return TypedActionResult.success(user.getStackInHand(hand));
     }
