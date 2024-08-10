@@ -2,13 +2,11 @@ package net.justacuriosfox.justsomestuff.item;
 
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.justacuriosfox.justsomestuff.JustSomeStuffMod;
+import net.justacuriosfox.justsomestuff.block.ModBlocks;
 import net.justacuriosfox.justsomestuff.item.custom.ReapingSwordItem;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
-import net.minecraft.item.FoodComponent;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroup;
-import net.minecraft.item.ToolMaterials;
+import net.minecraft.item.*;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
@@ -24,7 +22,7 @@ public class ModItems {
                     .group(ModItemGroup.ALCOHOL)
             ));
     public static final Item HOPS = registerItem("hops",
-            new ModHopsItem(new FabricItemSettings()
+            new AliasedBlockItem(ModBlocks.HOP_CROP, new FabricItemSettings()
                     .group(ModItemGroup.ALCOHOL)
             ));
     public static final Item BEER = registerItem("beer",

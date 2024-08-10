@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "age-0": {"model": "justsomestuff:block/hop_crop0"},
+    "age-1": {"model": "justsomestuff:block/hop_crop1"},
+    "age-2": {"model": "justsomestuff:block/hop_crop2"}
+  }
+}

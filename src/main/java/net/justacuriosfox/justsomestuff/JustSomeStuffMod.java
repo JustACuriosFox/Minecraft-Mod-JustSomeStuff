@@ -1,6 +1,7 @@
 package net.justacuriosfox.justsomestuff;
 
 import net.fabricmc.api.ModInitializer;
+import net.justacuriosfox.justsomestuff.block.ModBlocks;
 import net.justacuriosfox.justsomestuff.effect.ModEffects;
 import net.justacuriosfox.justsomestuff.enchantment.ModEnchantements;
 import net.justacuriosfox.justsomestuff.item.ModBeerItem;
@@ -23,5 +24,6 @@ public class JustSomeStuffMod implements ModInitializer {
 		ModRegistries.registerModStuffs();
 		ModPotions.registerPotions();
 		ModEnchantements.registerModEnchantments();
+		ModBlocks.registerModBlocks();
 	}
 }
