@@ -3,23 +3,26 @@
   "id": "justsomestuff",
   "version": "${version}",
 
-  "name": "Just Some Stuff",
+  "name": "Just Some Things",
   "description": "Just adds some stuff.",
   "authors": [
     "JustACuriosFox"
   ],
   "contact": {
-    "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
+    "homepage": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+    "sources": "https://github.com/JustACuriosFox/Minecraft-Mod-JustSomeStuff"
   },
 
   "license": "MIT",
-  "icon": "assets/modid/icon.png",
+  "icon": "assets/justsomestuff/icon.png",
 
   "environment": "*",
   "entrypoints": {
     "main": [
       "net.justacuriosfox.justsomestuff.JustSomeStuffMod"
+    ],
+    "client": [
+      "net.justacuriosfox.justsomestuff.JustSomeStuffClientMod"
     ]
   },
   "mixins": [

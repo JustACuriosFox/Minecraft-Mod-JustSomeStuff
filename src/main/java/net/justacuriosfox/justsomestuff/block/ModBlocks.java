@@ -23,7 +23,9 @@ import java.util.List;
 public class ModBlocks {
 
     public static final Block HOP_CROP = registerBlockWithoutBlockItem("hop_crop",
-            new HopCropBlock(FabricBlockSettings.copy(Blocks.SWEET_BERRY_BUSH).nonOpaque()), ModItemGroup.ALCOHOL);
+            new HopCropBlock(FabricBlockSettings
+                    .copy(Blocks.SWEET_BERRY_BUSH).nonOpaque())
+            , ModItemGroup.ALCOHOL);
 
     private static Block registerBlock(String name, Block block, ItemGroup group, String tooltipKey) {
         registerBlockItem(name, block, group, tooltipKey);

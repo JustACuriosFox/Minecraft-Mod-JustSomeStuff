@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/crop",
   "textures": {
-    "cross": "justsomestuff:block/hop_crop2"
+    "crop": "justsomestuff:block/hop_crop2"
   }
 }
