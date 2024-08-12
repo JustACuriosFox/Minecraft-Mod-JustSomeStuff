@@ -2,7 +2,6 @@ package net.justacuriosfox.justsomestuff.item;
 
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
 import net.justacuriosfox.justsomestuff.JustSomeStuffMod;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Identifier;

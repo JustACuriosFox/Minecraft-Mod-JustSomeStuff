@@ -1,22 +1,15 @@
 package net.justacuriosfox.justsomestuff.util;
 
-import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.trade.TradeOfferHelper;
 import net.justacuriosfox.justsomestuff.enchantment.ModEnchantements;
 import net.justacuriosfox.justsomestuff.item.ModItems;
 import net.justacuriosfox.justsomestuff.villager.ModVillagers;
 import net.minecraft.enchantment.EnchantmentLevelEntry;
-import net.minecraft.entity.Entity;
 import net.minecraft.item.EnchantedBookItem;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.village.TradeOffer;
-import net.minecraft.village.TradeOffers;
 import net.minecraft.village.VillagerProfession;
-import org.jetbrains.annotations.Nullable;
-
-import java.util.Random;
 
 public class ModRegistries {
     public static void registerModStuffs() {

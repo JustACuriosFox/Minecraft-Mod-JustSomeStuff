@@ -1,14 +1,10 @@
 package net.justacuriosfox.justsomestuff.potion;
 
-import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.justacuriosfox.justsomestuff.JustSomeStuffMod;
-import net.justacuriosfox.justsomestuff.effect.ModEffects;
-import net.justacuriosfox.justsomestuff.item.ModItemGroup;
 import net.justacuriosfox.justsomestuff.item.ModItems;
 import net.justacuriosfox.justsomestuff.mixin.BrewingRecipeRegistryMixin;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
-import net.minecraft.item.ItemGroup;
 import net.minecraft.potion.Potion;
 import net.minecraft.potion.Potions;
 import net.minecraft.util.Identifier;

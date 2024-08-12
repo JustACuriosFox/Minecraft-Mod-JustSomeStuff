@@ -6,11 +6,8 @@ import net.minecraft.enchantment.EnchantmentTarget;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.math.Vec3d;
-
-import java.util.Collection;
 
 public class YeetEnchantment extends Enchantment {
     protected YeetEnchantment(Rarity weight, EnchantmentTarget type, EquipmentSlot... slotTypes) {

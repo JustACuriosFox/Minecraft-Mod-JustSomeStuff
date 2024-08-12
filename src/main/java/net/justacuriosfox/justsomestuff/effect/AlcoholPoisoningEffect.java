@@ -1,19 +1,12 @@
 package net.justacuriosfox.justsomestuff.effect;
 
-import net.justacuriosfox.justsomestuff.JustSomeStuffMod;
 import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.MovementType;
-import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.effect.StatusEffectCategory;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.text.LiteralText;
 import net.minecraft.util.Util;
-import net.minecraft.util.math.Vec3d;
-import net.minecraft.util.math.Vec3f;
-import net.minecraft.util.math.Vec3i;
-import net.minecraft.util.registry.RegistryKey;
 
 public class AlcoholPoisoningEffect extends StatusEffect {
     public AlcoholPoisoningEffect(StatusEffectCategory statusEffectCategory, int color) {

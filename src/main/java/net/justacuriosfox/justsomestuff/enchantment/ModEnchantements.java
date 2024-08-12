@@ -4,7 +4,6 @@ import net.justacuriosfox.justsomestuff.JustSomeStuffMod;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentTarget;
 import net.minecraft.entity.EquipmentSlot;
-import net.minecraft.screen.slot.Slot;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 

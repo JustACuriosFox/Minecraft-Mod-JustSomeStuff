@@ -4,7 +4,6 @@ import net.fabricmc.api.ModInitializer;
 import net.justacuriosfox.justsomestuff.block.ModBlocks;
 import net.justacuriosfox.justsomestuff.effect.ModEffects;
 import net.justacuriosfox.justsomestuff.enchantment.ModEnchantements;
-import net.justacuriosfox.justsomestuff.item.ModBeerItem;
 import net.justacuriosfox.justsomestuff.item.ModItems;
 import net.justacuriosfox.justsomestuff.potion.ModPotions;
 import net.justacuriosfox.justsomestuff.util.ModRegistries;

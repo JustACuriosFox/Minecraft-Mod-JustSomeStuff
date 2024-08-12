@@ -4,8 +4,6 @@ import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.justacuriosfox.justsomestuff.JustSomeStuffMod;
 import net.justacuriosfox.justsomestuff.block.ModBlocks;
 import net.justacuriosfox.justsomestuff.item.custom.ReapingSwordItem;
-import net.minecraft.entity.effect.StatusEffectInstance;
-import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.*;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
