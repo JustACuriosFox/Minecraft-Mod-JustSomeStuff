@@ -10,5 +10,6 @@
   "enchantment.justsomestuff.affecting": "Affecting",
   "enchantment.justsomestuff.lifesteal": "Lifesteal",
   "enchantment.justsomestuff.yeet": "Yeet",
-  "block.justsomestuff.hop_crop": "Hop Crop"
+  "block.justsomestuff.hop_crop": "Hop Crop",
+  "entity.minecraft.villager.reaper": "Reaper"
 }

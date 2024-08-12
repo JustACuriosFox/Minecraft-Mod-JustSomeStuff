@@ -8,6 +8,7 @@ import net.justacuriosfox.justsomestuff.item.ModBeerItem;
 import net.justacuriosfox.justsomestuff.item.ModItems;
 import net.justacuriosfox.justsomestuff.potion.ModPotions;
 import net.justacuriosfox.justsomestuff.util.ModRegistries;
+import net.justacuriosfox.justsomestuff.villager.ModVillagers;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -25,5 +26,6 @@ public class JustSomeStuffMod implements ModInitializer {
 		ModPotions.registerPotions();
 		ModEnchantements.registerModEnchantments();
 		ModBlocks.registerModBlocks();
+		ModVillagers.setupPOIs();
 	}
 }
