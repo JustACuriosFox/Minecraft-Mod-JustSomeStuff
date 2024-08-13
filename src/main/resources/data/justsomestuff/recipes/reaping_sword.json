@@ -1,25 +1,12 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "G#G",
-    "#O#",
-    "SOS"
-  ],
-  "key": {
-    "O": {
-      "item": "minecraft:stick"
-    },
-    "#": {
-      "item": "minecraft:netherite_ingot"
-    },
-    "G": {
-      "item": "minecraft:diamond"
-    },
-    "S": {
-      "item": "minecraft:end_crystal"
-    }
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "justsomestuff:reaping_sword"
+  },
+  "addition": {
+    "item": "minecraft:netherite_ingot"
   },
   "result": {
-    "item": "justsomestuff:reaping_sword"
+    "item": "justsomestuff:reaping_sword_upgrade"
   }
 }

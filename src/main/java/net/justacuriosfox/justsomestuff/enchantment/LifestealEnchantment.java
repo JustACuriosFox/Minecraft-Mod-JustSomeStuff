@@ -1,6 +1,7 @@
 package net.justacuriosfox.justsomestuff.enchantment;
 
 import net.justacuriosfox.justsomestuff.item.ModItems;
+import net.justacuriosfox.justsomestuff.item.custom.ReapingSwordItem;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentTarget;
 import net.minecraft.entity.Entity;
@@ -23,7 +24,11 @@ public class LifestealEnchantment extends Enchantment {
 
     @Override
     public boolean isAcceptableItem(ItemStack stack) {
-        return stack.getItem() == ModItems.REAPING_SWORD;
+        if (stack.getItem() == ModItems.REAPING_SWORD){
+            return stack.getItem() == ModItems.REAPING_SWORD;
+        } else {
+            return stack.getItem() == ModItems.REAPING_SWORD_UPGRADE;
+        }
     }
 
     @Override

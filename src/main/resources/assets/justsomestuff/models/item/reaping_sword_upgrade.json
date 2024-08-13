@@ -1,18 +1,18 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "justsomestuff:item/weapons/reaping_sword"
+    "layer0": "justsomestuff:item/weapons/reaper_sword_upgrade"
   },
   "display": {
     "thirdperson_righthand": {
       "rotation": [ 0, -90, 55 ],
       "translation": [ 0, 4.0, 0.5 ],
-      "scale": [ 1, 1, 1 ]
+      "scale": [ 1.25, 1.25, 1.25 ]
     },
     "thirdperson_lefthand": {
       "rotation": [ 0, 90, -55 ],
       "translation": [ 0, 4.0, 0.5 ],
-      "scale": [ 1, 1, 1 ]
+      "scale": [ 1.25, 1.25, 1.25 ]
     },
     "firstperson_righthand": {
       "rotation": [ 0, -90, 25 ],

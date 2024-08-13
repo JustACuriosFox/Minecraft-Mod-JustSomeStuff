@@ -10,9 +10,14 @@ import net.minecraft.util.registry.Registry;
 
 public class ModItems {
     public static final ReapingSwordItem REAPING_SWORD = (ReapingSwordItem) registerItem("reaping_sword",
-            new ReapingSwordItem(ToolMaterials.NETHERITE, 7, -2.4F, new FabricItemSettings()
+            new ReapingSwordItem(ToolMaterials.NETHERITE, 5, -2.4F, new FabricItemSettings()
                     .maxCount(1)
                     .fireproof()
+                    .group(ModItemGroup.WEAPONS)
+            ));
+    public static final ReapingSwordItem REAPING_SWORD_UPGRADE = (ReapingSwordItem) registerItem("reaping_sword_upgrade",
+            new ReapingSwordItem(ToolMaterials.DIAMOND, 16, -2.4F, new FabricItemSettings()
+                    .maxCount(1)
                     .group(ModItemGroup.WEAPONS)
             ));
     public static final Item HOP_JUICE = registerItem("hop_juice",

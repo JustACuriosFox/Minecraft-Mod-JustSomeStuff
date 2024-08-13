@@ -1,6 +1,7 @@
 package net.justacuriosfox.justsomestuff.item;
 
 import net.justacuriosfox.justsomestuff.effect.ModEffects;
+import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.*;
@@ -13,6 +14,23 @@ import java.util.Objects;
 public class ModBeerItem extends Item{
     public ModBeerItem(Settings settings) {
         super(settings);
+    }
+
+    @Override
+    public ActionResult useOnEntity(ItemStack stack, PlayerEntity user, LivingEntity entity, Hand hand) {
+
+        user.playSound(SoundEvents.ENTITY_GENERIC_DRINK, 1f, 0.7f);
+        if (entity.hasStatusEffect(ModEffects.ALCOHOL_POISONING)) {
+            int EffectAmplifier = Objects.requireNonNull(entity.getStatusEffect(ModEffects.ALCOHOL_POISONING)).getAmplifier();
+            entity.addStatusEffect(new StatusEffectInstance(ModEffects.ALCOHOL_POISONING,
+                    10,
+                    EffectAmplifier + 1));
+        } else {
+            entity.addStatusEffect(new StatusEffectInstance(ModEffects.ALCOHOL_POISONING, 10, 1));
+        }
+        user.getStackInHand(hand).decrement(1);
+
+        return super.useOnEntity(stack, user, entity, hand);
     }
 
     @Override

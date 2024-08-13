@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "GUG",
+    "#O#",
+    "SOS"
+  ],
+  "key": {
+    "U": {
+      "item": "minecraft:nether_star"
+    },
+    "O": {
+      "item": "minecraft:stick"
+    },
+    "#": {
+      "item": "minecraft:dragon_breath"
+    },
+    "G": {
+      "item": "minecraft:diamond"
+    },
+    "S": {
+      "item": "minecraft:end_crystal"
+    }
+  },
+  "result": {
+    "item": "justsomestuff:reaping_sword"
+  }
+}
