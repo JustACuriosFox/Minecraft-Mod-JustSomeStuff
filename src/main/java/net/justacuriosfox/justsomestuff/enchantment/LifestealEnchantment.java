@@ -25,7 +25,7 @@ public class LifestealEnchantment extends Enchantment {
     @Override
     public boolean isAcceptableItem(ItemStack stack) {
         if (stack.getItem() == ModItems.REAPING_SWORD){
-            return stack.getItem() == ModItems.REAPING_SWORD;
+            return true;
         } else {
             return stack.getItem() == ModItems.REAPING_SWORD_UPGRADE;
         }

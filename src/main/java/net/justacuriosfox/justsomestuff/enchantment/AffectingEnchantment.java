@@ -32,7 +32,11 @@ public class AffectingEnchantment extends Enchantment {
 
     @Override
     public boolean isAcceptableItem(ItemStack stack) {
-        return stack.getItem() == ModItems.REAPING_SWORD;
+        if (stack.getItem() == ModItems.REAPING_SWORD){
+            return true;
+        } else {
+            return stack.getItem() == ModItems.REAPING_SWORD_UPGRADE;
+        }
     }
 
     @Override
