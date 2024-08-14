@@ -9,8 +9,6 @@ import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.*;
 import net.minecraft.world.World;
 
-import java.util.Objects;
-
 public class ModBeerItem extends Item{
     public ModBeerItem(Settings settings) {
         super(settings);
@@ -21,14 +19,22 @@ public class ModBeerItem extends Item{
 
         user.playSound(SoundEvents.ENTITY_GENERIC_DRINK, 1f, 0.7f);
         if (entity.hasStatusEffect(ModEffects.ALCOHOL_POISONING)) {
-            int EffectAmplifier = Objects.requireNonNull(entity.getStatusEffect(ModEffects.ALCOHOL_POISONING)).getAmplifier();
-            entity.addStatusEffect(new StatusEffectInstance(ModEffects.ALCOHOL_POISONING,
-                    10,
-                    EffectAmplifier + 1));
+            int EffectAmplifier = entity.getStatusEffect(ModEffects.ALCOHOL_POISONING).getAmplifier();
+            if (EffectAmplifier == 1) {
+                entity.addStatusEffect(new StatusEffectInstance(ModEffects.ALCOHOL_POISONING,
+                        10 * 60 * 20,
+                        EffectAmplifier + 1));
+            } else {
+                entity.addStatusEffect(new StatusEffectInstance(ModEffects.ALCOHOL_POISONING,
+                        10 * 60 * 20,
+                        EffectAmplifier + 1));
+            }
         } else {
-            entity.addStatusEffect(new StatusEffectInstance(ModEffects.ALCOHOL_POISONING, 10, 1));
+            entity.addStatusEffect(new StatusEffectInstance(ModEffects.ALCOHOL_POISONING, 10 * 60 * 20, 1));
         }
-        user.getStackInHand(hand).decrement(1);
+        if (!user.isCreative()){
+            user.getStackInHand(hand).decrement(1);
+        }
 
         return super.useOnEntity(stack, user, entity, hand);
     }
@@ -38,14 +44,22 @@ public class ModBeerItem extends Item{
 
         user.playSound(SoundEvents.ENTITY_GENERIC_DRINK, 1f, 0.7f);
         if (user.hasStatusEffect(ModEffects.ALCOHOL_POISONING)) {
-            int EffectAmplifier = Objects.requireNonNull(user.getStatusEffect(ModEffects.ALCOHOL_POISONING)).getAmplifier();
-            user.addStatusEffect(new StatusEffectInstance(ModEffects.ALCOHOL_POISONING,
-                    10,
-                    EffectAmplifier + 1));
+            int EffectAmplifier = user.getStatusEffect(ModEffects.ALCOHOL_POISONING).getAmplifier();
+            if (EffectAmplifier == 1) {
+                user.addStatusEffect(new StatusEffectInstance(ModEffects.ALCOHOL_POISONING,
+                        10 * 60 * 20,
+                        EffectAmplifier + 1));
+            } else {
+                user.addStatusEffect(new StatusEffectInstance(ModEffects.ALCOHOL_POISONING,
+                        10 * 60 * 20,
+                        EffectAmplifier + 1));
+            }
         } else {
-            user.addStatusEffect(new StatusEffectInstance(ModEffects.ALCOHOL_POISONING, 10, 1));
+            user.addStatusEffect(new StatusEffectInstance(ModEffects.ALCOHOL_POISONING, 10 * 60 * 20, 1));
         }
-        user.getStackInHand(hand).decrement(1);
+        if (!user.isCreative()){
+            user.getStackInHand(hand).decrement(1);
+        }
 
         return TypedActionResult.success(user.getStackInHand(hand));
     }

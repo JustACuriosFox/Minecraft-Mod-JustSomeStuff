@@ -17,10 +17,9 @@ public class AlcoholPoisoningEffect extends StatusEffect {
     public void applyUpdateEffect(LivingEntity pLivingEntity, int pAmplifier) {
         if (!pLivingEntity.world.isClient()) {
             if (pLivingEntity.isAlive()) {
-                pLivingEntity.addStatusEffect(new StatusEffectInstance(ModEffects.ALCOHOL_POISONING, 40, pAmplifier));
                 if (pAmplifier >= 30) {
                     pLivingEntity.kill();
-                    pLivingEntity.sendSystemMessage(new LiteralText("You drank too much alcohol nad died of Alcohol poisoning."), Util.NIL_UUID);
+                    pLivingEntity.sendSystemMessage(new LiteralText("You drank too much alcohol and died of Alcohol poisoning."), Util.NIL_UUID);
                     pLivingEntity.removeStatusEffect(ModEffects.ALCOHOL_POISONING);
                 }
 
