@@ -2,7 +2,10 @@
   "item.justsomestuff.beer": "Beer",
   "item.justsomestuff.hops.tooltip": " §7Doesn't do much on its own and doesn't even taste good either.§r",
   "effect.justsomestuff.alcohol_poisoning": "Alcohol Poisoning",
-  "item.justsomestuff.hop_juice": "Hop Juice",
+  "effect.justsomestuff.drunk": "Drunk",
+  "effect.justsomestuff.high_lsd": "High",
+  "item.justsomestuff.lsd": "LSD",
+  "item.justsomestuff.hop_juice": "Alcohol",
   "item.justsomestuff.hops": "Hops",
   "item.justsomestuff.reaping_sword": "Reaper's Scythe",
   "item.justsomestuff.reaping_sword_upgrade": "Reaper's Scythe",
@@ -11,6 +14,9 @@
   "enchantment.justsomestuff.affecting": "Affecting",
   "enchantment.justsomestuff.lifesteal": "Lifesteal",
   "enchantment.justsomestuff.yeet": "Yeet",
+  "enchantment.justsomestuff.powerless_curse": "Curse of Powerlessness",
   "block.justsomestuff.hop_crop": "Hop Crop",
-  "entity.minecraft.villager.reaper": "Reaper"
+  "entity.minecraft.villager.reaper": "Reaper",
+  "item.justsomestuff.police_spawn_egg": "Police Spawn Egg",
+  "entity.justsomestuff.police": "Policeperson"
 }

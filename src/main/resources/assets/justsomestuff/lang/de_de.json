@@ -2,7 +2,10 @@
   "item.justsomestuff.beer": "Bier",
   "item.justsomestuff.hops.tooltip": "Macht nicht sehr viel und schmeckt nicht einmal gut.",
   "effect.justsomestuff.alcohol_poisoning": "Alkoholvergiftung",
-  "item.justsomestuff.hop_juice": "Hopfensaft",
+  "item.justsomestuff.hop_juice": "Alkohol",
+  "effect.justsomestuff.drunk": "unter Alkoholhaltigem Getränkseinfluss",
+  "effect.justsomestuff.high_lsd": "High",
+  "item.justsomestuff.lsd": "LSD",
   "item.justsomestuff.hops": "Hopfen",
   "item.justsomestuff.reaping_sword": "Sensenmann Sense(Mann ich weiß doch auch nicht mehr)",
   "item.justsomestuff.reaping_sword_upgrade": "Sensenmann Sense(Mann ich weiß doch auch nicht mehr)",
@@ -11,6 +14,9 @@
   "enchantment.justsomestuff.affecting": "Effektübertragungszauberspruchmanifestierung",
   "enchantment.justsomestuff.lifesteal": "Illegale Herztransplantation",
   "enchantment.justsomestuff.yeet": "Yeet",
+  "enchantment.justsomestuff.powerless_curse": "Fluch der Kraftausübungsunfähigkeit",
   "block.justsomestuff.hop_crop": "Hopfen Planze",
-  "entity.minecraft.villager.reaper": "Schnitterknochen (OMG it's a sot reference)"
+  "entity.minecraft.villager.reaper": "Schnitterknochen (OMG it's a sot reference)",
+  "item.justsomestuff.police_spawn_egg": "Polizei Spawn Egg",
+  "entity.justsomestuff.police": "Polizeimensch"
 }

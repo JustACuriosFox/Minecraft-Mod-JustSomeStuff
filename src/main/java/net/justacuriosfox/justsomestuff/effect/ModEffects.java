@@ -7,15 +7,26 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
 public class ModEffects {
-    public static StatusEffect ALCOHOL_POISONING;
+    public static StatusEffect ALCOHOL_POISONING = registerStatusEffect("alcohol_poisoning",
+            new AlcoholPoisoningEffect(
+                    StatusEffectCategory.HARMFUL,
+                    10092288));
+    public static StatusEffect DRUNK = registerStatusEffect("drunk",
+            new DrunkEffect(
+                    StatusEffectCategory.NEUTRAL,
+                    12));
+    public static StatusEffect HIGH_LSD = registerStatusEffect("high_lsd",
+            new LSDEffect(
+                    StatusEffectCategory.HARMFUL,
+                    784932
+            ));
 
-    public static StatusEffect registerStatusEffect(String name) {
-        return Registry.register(Registry.STATUS_EFFECT, new Identifier(JustSomeStuffMod.MOD_ID, name),
-                new AlcoholPoisoningEffect(StatusEffectCategory.HARMFUL, 12624973));
+    public static StatusEffect registerStatusEffect(String name, StatusEffect effect) {
+        return Registry.register(Registry.STATUS_EFFECT, new Identifier(JustSomeStuffMod.MOD_ID, name), effect);
     }
 
     public static void registerEffects() {
         JustSomeStuffMod.LOGGER.info("loading Status Effects");
-        ALCOHOL_POISONING = registerStatusEffect("alcohol_poisoning");
+
     }
 }

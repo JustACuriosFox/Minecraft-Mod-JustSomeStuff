@@ -8,18 +8,20 @@ import net.minecraft.entity.Entity;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.math.Vec3d;
 
-public class YeetEnchantment extends Enchantment {
-    protected YeetEnchantment(Rarity weight, EnchantmentTarget type, EquipmentSlot... slotTypes) {
+public class PullEnchantment extends Enchantment {
+    protected PullEnchantment(Rarity weight, EnchantmentTarget type, EquipmentSlot... slotTypes) {
         super(weight, type, slotTypes);
     }
 
     @Override
     public void onTargetDamaged(LivingEntity user, Entity target, int level) {
-        if (!user.world.isClient()) {
-            LivingEntity Ltarget = (LivingEntity) target;
-            Ltarget.setVelocity(new Vec3d(Ltarget.getVelocity().x, .5*level, Ltarget.getVelocity().z));
+        if (!user.world.isClient()){
+            double x = target.getX() - user.getX();
+            double z = target.getZ() - user.getZ();
+            x = (x * -0.05) * level;
+            z = (z * -0.05) * level;
+            target.addVelocity(x, 0, z);
         }
 
         super.onTargetDamaged(user, target, level);
@@ -27,7 +29,7 @@ public class YeetEnchantment extends Enchantment {
 
     @Override
     protected boolean canAccept(Enchantment other) {
-        if (other == Enchantments.KNOCKBACK || other == ModEnchantements.PULL || other == Enchantments.BINDING_CURSE){
+        if (other == Enchantments.KNOCKBACK || other == ModEnchantements.YEET){
             return false;
         } else {
             return super.canAccept(other);

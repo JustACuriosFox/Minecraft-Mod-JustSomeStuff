@@ -17,6 +17,12 @@ public class ModEnchantements {
     public static Enchantment LIFESTEAL = register("lifesteal",
             new LifestealEnchantment(Enchantment.Rarity.VERY_RARE,
                     EnchantmentTarget.WEAPON, EquipmentSlot.MAINHAND));
+    public static Enchantment PULL = register("pull",
+            new PullEnchantment(Enchantment.Rarity.RARE,
+                    EnchantmentTarget.WEAPON, EquipmentSlot.MAINHAND));
+    public static Enchantment POWERLESS_CURSE = register("powerless_curse",
+            new PowerlessCurseEnchantment(Enchantment.Rarity.VERY_RARE,
+                    EnchantmentTarget.BREAKABLE, EquipmentSlot.MAINHAND));
 
     private static Enchantment register(String name, Enchantment enchantment) {
         return Registry.register(Registry.ENCHANTMENT, new Identifier(JustSomeStuffMod.MOD_ID, name), enchantment);

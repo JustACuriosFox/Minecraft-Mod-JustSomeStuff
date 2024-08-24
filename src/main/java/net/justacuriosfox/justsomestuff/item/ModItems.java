@@ -3,6 +3,7 @@ package net.justacuriosfox.justsomestuff.item;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.justacuriosfox.justsomestuff.JustSomeStuffMod;
 import net.justacuriosfox.justsomestuff.block.ModBlocks;
+import net.justacuriosfox.justsomestuff.entity.ModEntities;
 import net.justacuriosfox.justsomestuff.item.custom.ReapingSwordItem;
 import net.minecraft.item.*;
 import net.minecraft.util.Identifier;
@@ -33,6 +34,14 @@ public class ModItems {
                     .group(ModItemGroup.ALCOHOL)
                     .maxCount(1)
             ));
+    public static final Item LSD = registerItem("lsd",
+            new LSDItem(new FabricItemSettings()
+                    .group(ModItemGroup.ALCOHOL)
+                    .maxCount(64)
+            ));
+    public static final Item POLICE_SPAWN_EGG = registerItem("police_spawn_egg",
+            new SpawnEggItem(ModEntities.POLICE, 3093151, 3093247,
+                    new FabricItemSettings().group(ModItemGroup.ALCOHOL).maxCount(64)));
 
     public static Item registerItem(String name, Item item) {
         return Registry.register(Registry.ITEM, new Identifier(JustSomeStuffMod.MOD_ID, name), item);

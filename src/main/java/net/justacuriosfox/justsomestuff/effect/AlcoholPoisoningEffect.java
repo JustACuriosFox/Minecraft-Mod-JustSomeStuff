@@ -24,24 +24,17 @@ public class AlcoholPoisoningEffect extends StatusEffect {
                 }
 
                 if (pAmplifier >= 20) {
+                    pLivingEntity.setHealth(pLivingEntity.getMaxHealth() / 2);
+                }
+                if (pAmplifier >= 15) {
                     if (!pLivingEntity.hasStatusEffect(StatusEffects.BLINDNESS)) {
                         pLivingEntity.addStatusEffect(new StatusEffectInstance(StatusEffects.BLINDNESS, 20 * 20, 1));
                     }
-                    pLivingEntity.setHealth(pLivingEntity.getMaxHealth() / 2);
-                }
-                if (pAmplifier >= 25){
-                    if (!pLivingEntity.hasStatusEffect(StatusEffects.POISON)) {
-                        pLivingEntity.addStatusEffect(new StatusEffectInstance(StatusEffects.POISON, 20 * 20, 10));
-                    }
-                }
-                if (pAmplifier >= 15) {
-                    if (!pLivingEntity.hasStatusEffect(StatusEffects.MINING_FATIGUE)) {
-                        pLivingEntity.addStatusEffect(new StatusEffectInstance(StatusEffects.MINING_FATIGUE, 40, 1));
-                    } if (!pLivingEntity.hasStatusEffect(StatusEffects.SLOWNESS)) {
-                        pLivingEntity.addStatusEffect(new StatusEffectInstance(StatusEffects.SLOWNESS, 40, 1));
-                    }
                 }
                 if (pAmplifier >= 7) {
+                    if (!pLivingEntity.hasStatusEffect(ModEffects.DRUNK)){
+                        pLivingEntity.addStatusEffect(new StatusEffectInstance(ModEffects.DRUNK, 20 * 20, 3));
+                    }
                     if (!pLivingEntity.hasStatusEffect(StatusEffects.NAUSEA)){
                         pLivingEntity.addStatusEffect(new StatusEffectInstance(StatusEffects.NAUSEA, 20 * 20, 3));
                     }

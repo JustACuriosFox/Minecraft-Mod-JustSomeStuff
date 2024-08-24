@@ -10,6 +10,7 @@ import net.justacuriosfox.justsomestuff.util.ModRegistries;
 import net.justacuriosfox.justsomestuff.villager.ModVillagers;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import software.bernie.geckolib3.GeckoLib;
 
 public class JustSomeStuffMod implements ModInitializer {
 	public static final String MOD_ID = "justsomestuff";
@@ -26,5 +27,7 @@ public class JustSomeStuffMod implements ModInitializer {
 		ModEnchantements.registerModEnchantments();
 		ModBlocks.registerModBlocks();
 		ModVillagers.setupPOIs();
+
+		GeckoLib.initialize();
 	}
 }
