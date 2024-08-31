@@ -21,7 +21,7 @@ public class ReapingSwordItem extends SwordItem {
             double x = entity.getX() - user.getX();
             double z = entity.getZ() - user.getZ();
             double y = Math.min(((user.getPitch() * 0.05) * .75), 1.2);
-            double factor = Math.min(Math.sqrt((x*x) + (z*z)) * .6, 1.4);
+            double factor = Math.min(Math.sqrt((x*x) + (z*z)) * .6, 2);
             entity.addVelocity(x, y * factor, z);
             user.getItemCooldownManager().set(user.getStackInHand(hand).getItem(), 50);
         }

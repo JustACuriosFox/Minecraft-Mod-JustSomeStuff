@@ -2,10 +2,13 @@ package net.justacuriosfox.justsomestuff;
 
 import net.fabricmc.api.ModInitializer;
 import net.justacuriosfox.justsomestuff.block.ModBlocks;
+import net.justacuriosfox.justsomestuff.block.entity.ModBlockEntities;
 import net.justacuriosfox.justsomestuff.effect.ModEffects;
 import net.justacuriosfox.justsomestuff.enchantment.ModEnchantements;
 import net.justacuriosfox.justsomestuff.item.ModItems;
 import net.justacuriosfox.justsomestuff.potion.ModPotions;
+import net.justacuriosfox.justsomestuff.recipe.ModRecipes;
+import net.justacuriosfox.justsomestuff.screen.ModScreenHandlers;
 import net.justacuriosfox.justsomestuff.util.ModRegistries;
 import net.justacuriosfox.justsomestuff.villager.ModVillagers;
 import org.slf4j.Logger;
@@ -27,6 +30,9 @@ public class JustSomeStuffMod implements ModInitializer {
 		ModEnchantements.registerModEnchantments();
 		ModBlocks.registerModBlocks();
 		ModVillagers.setupPOIs();
+		ModBlockEntities.registerAllBlockEntities();
+		ModRecipes.registerRecipes();
+		ModScreenHandlers.registerAllScreenHandlers();
 
 		GeckoLib.initialize();
 	}

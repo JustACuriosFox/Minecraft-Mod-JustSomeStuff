@@ -4,9 +4,11 @@ import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.justacuriosfox.justsomestuff.JustSomeStuffMod;
 import net.justacuriosfox.justsomestuff.block.custom.HopCropBlock;
+import net.justacuriosfox.justsomestuff.block.custom.LSDFurnaceBlock;
 import net.justacuriosfox.justsomestuff.item.ModItemGroup;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
+import net.minecraft.block.Material;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
@@ -26,6 +28,8 @@ public class ModBlocks {
             new HopCropBlock(FabricBlockSettings
                     .copy(Blocks.SWEET_BERRY_BUSH).nonOpaque())
             , ModItemGroup.ALCOHOL);
+    public static final Block LSDFURNACE = registerBlock("lsdfurnace",
+            new LSDFurnaceBlock(FabricBlockSettings.of(Material.METAL).nonOpaque()), ModItemGroup.ALCOHOL);
 
     private static Block registerBlock(String name, Block block, ItemGroup group, String tooltipKey) {
         registerBlockItem(name, block, group, tooltipKey);

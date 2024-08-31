@@ -2,7 +2,6 @@ package net.justacuriosfox.justsomestuff.entity.custom;
 
 import net.justacuriosfox.justsomestuff.effect.ModEffects;
 import net.justacuriosfox.justsomestuff.item.ModItems;
-import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.ai.TargetPredicate;
@@ -12,10 +11,9 @@ import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.mob.HostileEntity;
 import net.minecraft.entity.mob.MobEntity;
-import net.minecraft.entity.passive.IronGolemEntity;
 import net.minecraft.entity.passive.PassiveEntity;
-import net.minecraft.entity.passive.VillagerEntity;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
@@ -31,8 +29,7 @@ import software.bernie.geckolib3.core.manager.AnimationData;
 import software.bernie.geckolib3.core.manager.AnimationFactory;
 
 import java.util.EnumSet;
-import java.util.Iterator;
-import java.util.List;
+import java.util.function.Predicate;
 
 public class PoliceEntity extends PassiveEntity implements IAnimatable {
     private AnimationFactory factory = new AnimationFactory(this);
@@ -42,7 +39,7 @@ public class PoliceEntity extends PassiveEntity implements IAnimatable {
     }
 
     public static DefaultAttributeContainer.Builder setAttributes() {
-        return HostileEntity.createMobAttributes()
+        return PassiveEntity.createMobAttributes()
                 .add(EntityAttributes.GENERIC_MAX_HEALTH, 20.0D)
                 .add(EntityAttributes.GENERIC_ATTACK_DAMAGE, 8.0f)
                 .add(EntityAttributes.GENERIC_ATTACK_SPEED, 2.0f)
@@ -50,42 +47,42 @@ public class PoliceEntity extends PassiveEntity implements IAnimatable {
                 .add(EntityAttributes.GENERIC_FOLLOW_RANGE, 12.0);
     }
 
-    class TargetLSDGoal extends AttackGoal{
-        private final PoliceEntity police;
-        @Nullable
-        private LivingEntity target;
+    private class TargetLSDGoal extends ActiveTargetGoal {
 
-        public TargetLSDGoal(PoliceEntity police) {
-            super(police);
-            this.police = police;
-            this.setControls(EnumSet.of(Control.TARGET));
+        public TargetLSDGoal(MobEntity mob, Class targetClass, boolean checkVisibility) {
+            super(mob, targetClass, checkVisibility);
         }
 
+        @Override
         public boolean canStart() {
-            this.target = player;
-
-            if (this.target == null) {
+            if (this.reciprocalChance > 0 && this.mob.getRandom().nextInt(this.reciprocalChance) != 0) {
                 return false;
-            } else if (!this.target.isSpectator() && !((PlayerEntity)this.target).isCreative() && this.target.getMainHandStack().isOf(ModItems.LSD)) {
-                return true;
             } else {
-                return false;
+                this.findClosestTarget();
+                return this.targetEntity != null;
             }
         }
 
-        public void start() {
-            this.police.setTarget(this.target);
-            super.start();
+        @Override
+        protected void findClosestTarget() {
+            PlayerEntity nearestPlayer = this.mob.world.getClosestPlayer(this.mob, 12);
+            if (nearestPlayer.hasStatusEffect(ModEffects.HIGH_LSD)) {
+                this.targetEntity = nearestPlayer;
+            } else {
+                this.targetEntity = null;
+            }
+            super.findClosestTarget();
         }
     }
 
     protected void initGoals() {
         this.goalSelector.add(0, new SwimGoal(this));
         this.goalSelector.add(1, new AttackGoal(this));
-        this.targetSelector.add(1, new TargetLSDGoal(this));
+        this.targetSelector.add(1, new TargetLSDGoal(this, PlayerEntity.class, true));
         this.goalSelector.add(3, new LookAtEntityGoal(this, PlayerEntity.class, 12f));
-        this.goalSelector.add(4, new WanderAroundPointOfInterestGoal(this, 1f, false));
+        this.goalSelector.add(4, new WanderAroundGoal(this, 1f, 50));
     }
+
 
     private <E extends IAnimatable> PlayState predicate(AnimationEvent<E> event) {
         if (this.isAttacking()) {
