@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "GGG",
+    "SHS",
+    "SOS"
+  ],
+  "key": {
+    "H": {
+      "item": "justsomestuff:beer"
+    },
+    "O": {
+      "item": "minecraft:iron_ingot"
+    },
+    "G": {
+      "item": "minecraft:cobblestone"
+    },
+    "S": {
+      "item": "minecraft:oak_planks"
+    }
+  },
+  "result": {
+    "item": "justsomestuff:lsdfurnace"
+  }
+}

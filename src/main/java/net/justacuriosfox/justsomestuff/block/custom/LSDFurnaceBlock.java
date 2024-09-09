@@ -1,7 +1,5 @@
 package net.justacuriosfox.justsomestuff.block.custom;
 
-import net.justacuriosfox.justsomestuff.block.entity.LSDFurnaceBlockEntity;
-import net.justacuriosfox.justsomestuff.block.entity.ModBlockEntities;
 import net.minecraft.block.*;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.block.entity.BlockEntityTicker;
@@ -25,7 +23,7 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.stream.Stream;
 
-public class LSDFurnaceBlock extends BlockWithEntity implements BlockEntityProvider {
+public class LSDFurnaceBlock extends Block {
     public static final DirectionProperty FACING = Properties.HORIZONTAL_FACING;
 
     public LSDFurnaceBlock(Settings settings) {
@@ -119,7 +117,7 @@ public class LSDFurnaceBlock extends BlockWithEntity implements BlockEntityProvi
     @Nullable
     @Override
     public BlockState getPlacementState(ItemPlacementContext ctx) {
-        return this.getDefaultState().with(FACING, ctx.getPlayerFacing().getOpposite());
+        return this.getDefaultState().with(FACING, ctx.getHorizontalPlayerFacing().getOpposite());
     }
 
     @Override
@@ -147,11 +145,6 @@ public class LSDFurnaceBlock extends BlockWithEntity implements BlockEntityProvi
     @Override
     public void onStateReplaced(BlockState state, World world, BlockPos pos, BlockState newState, boolean moved) {
         if (state.getBlock() != newState.getBlock()) {
-            BlockEntity blockEntity = world.getBlockEntity(pos);
-            if (blockEntity instanceof LSDFurnaceBlockEntity) {
-                ItemScatterer.spawn(world, pos, (LSDFurnaceBlockEntity)blockEntity);
-                world.updateComparators(pos,this);
-            }
             super.onStateReplaced(state, world, pos, newState, moved);
         }
     }
@@ -168,17 +161,5 @@ public class LSDFurnaceBlock extends BlockWithEntity implements BlockEntityProvi
         }
 
         return ActionResult.SUCCESS;
-    }
-
-    @Nullable
-    @Override
-    public BlockEntity createBlockEntity(BlockPos pos, BlockState state) {
-        return new LSDFurnaceBlockEntity(pos, state);
-    }
-
-    @Nullable
-    @Override
-    public <T extends BlockEntity> BlockEntityTicker<T> getTicker(World world, BlockState state, BlockEntityType<T> type) {
-        return checkType(type, ModBlockEntities.LSDFURNACE, LSDFurnaceBlockEntity::tick);
     }
 }

@@ -23,7 +23,7 @@ public class PowerlessCurseEnchantment extends Enchantment {
     public void onTargetDamaged(LivingEntity user, Entity target, int level) {
         Hand hand = user.getActiveHand();
         ItemStack stack = user.getStackInHand(hand);
-        if (!user.world.isClient()){
+        if (!user.getWorld().isClient()){
             stack.decrement(stack.getCount());
             user.playSound(SoundEvents.ENTITY_ITEM_BREAK, 1f, 0.5f);
             

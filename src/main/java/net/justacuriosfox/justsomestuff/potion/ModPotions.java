@@ -7,14 +7,15 @@ import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.potion.Potion;
 import net.minecraft.potion.Potions;
+import net.minecraft.registry.Registries;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.registry.Registry;
+import net.minecraft.registry.Registry;
 
 public class ModPotions {
     public static Potion HOP_JUICE;
 
     public static Potion registerPotion(String name) {
-        return Registry.register(Registry.POTION, new Identifier(JustSomeStuffMod.MOD_ID, name),
+        return Registry.register(Registries.POTION, new Identifier(JustSomeStuffMod.MOD_ID, name),
                 new Potion
                         (new StatusEffectInstance(StatusEffects.POISON, 5*20, 3)));
     }

@@ -1,34 +1,41 @@
 package net.justacuriosfox.justsomestuff.villager;
 
 import com.google.common.collect.ImmutableSet;
-import net.fabricmc.fabric.mixin.object.builder.PointOfInterestTypeAccessor;
-import net.fabricmc.fabric.mixin.object.builder.VillagerProfessionAccessor;
+import net.fabricmc.fabric.api.object.builder.v1.world.poi.PointOfInterestHelper;
 import net.justacuriosfox.justsomestuff.JustSomeStuffMod;
+import net.justacuriosfox.justsomestuff.block.ModBlocks;
 import net.minecraft.block.Block;
-import net.minecraft.block.Blocks;
+import net.minecraft.registry.Registries;
+import net.minecraft.registry.RegistryKey;
+import net.minecraft.registry.RegistryKeys;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.registry.Registry;
+import net.minecraft.registry.Registry;
 import net.minecraft.village.VillagerProfession;
 import net.minecraft.world.poi.PointOfInterestType;
 
 public class ModVillagers {
-    public static final PointOfInterestType REAPER_POI = registerPOI("reaperpoi", Blocks.DRAGON_EGG);
-    public static final VillagerProfession REAPER = registerProfession("reaper", REAPER_POI);
+    public static final RegistryKey<PointOfInterestType> REAPER_POI_KEY = poiKey("reaperpoi");
+    public static final PointOfInterestType REAPER_POI = registerPoi("reaperpoi", ModBlocks.REAPERCORE);
 
-    public static VillagerProfession registerProfession(String name, PointOfInterestType type) {
-        return Registry.register(Registry.VILLAGER_PROFESSION, new Identifier(JustSomeStuffMod.MOD_ID, name),
-                VillagerProfessionAccessor.create(name, type, ImmutableSet.of(), ImmutableSet.of(),
-                        SoundEvents.ENTITY_VILLAGER_WORK_CLERIC));
+    public static final VillagerProfession REAPER = registerProfession("reaper", REAPER_POI_KEY);
+
+
+    private static VillagerProfession registerProfession(String name, RegistryKey<PointOfInterestType> type) {
+        return Registry.register(Registries.VILLAGER_PROFESSION, new Identifier(JustSomeStuffMod.MOD_ID, name),
+                new VillagerProfession(name, entry -> entry.matchesKey(type), entry -> entry.matchesKey(type),
+                        ImmutableSet.of(), ImmutableSet.of(), SoundEvents.ENTITY_VILLAGER_WORK_SHEPHERD));
     }
 
-    public static PointOfInterestType registerPOI(String name, Block block) {
-        return Registry.register(Registry.POINT_OF_INTEREST_TYPE, new Identifier(JustSomeStuffMod.MOD_ID, name),
-                PointOfInterestTypeAccessor.callCreate(name,
-                        ImmutableSet.copyOf(block.getStateManager().getStates()), 1, 1));
+    private static PointOfInterestType registerPoi(String name, Block block) {
+        return PointOfInterestHelper.register(new Identifier(JustSomeStuffMod.MOD_ID, name), 1, 1, block);
     }
 
-    public static void setupPOIs() {
-        PointOfInterestTypeAccessor.callSetup(REAPER_POI);
+    private static RegistryKey<PointOfInterestType> poiKey(String name) {
+        return RegistryKey.of(RegistryKeys.POINT_OF_INTEREST_TYPE, new Identifier(JustSomeStuffMod.MOD_ID, name));
+    }
+
+    public static void registerVillagers() {
+        JustSomeStuffMod.LOGGER.info("Registering Villagers " + JustSomeStuffMod.MOD_ID);
     }
 }

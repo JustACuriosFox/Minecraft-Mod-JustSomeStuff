@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "justsomestuff:blood_orb"
+    },
+    {
+      "item": "justsomestuff:blood_orb"
+    },
+    {
+      "item": "justsomestuff:blood_orb"
+    },
+    {
+      "item": "justsomestuff:blood_orb"
+    },
+    {
+      "item": "justsomestuff:wasteroot_item"
+    },
+    {
+      "item": "justsomestuff:wasteroot_item"
+    },
+    {
+      "item": "justsomestuff:wasteroot_item"
+    },
+    {
+      "item": "justsomestuff:wasteroot_item"
+    }
+  ],
+  "result": {
+    "item": "justsomestuff:enhanced_wasteroot",
+    "count": 1
+  }
+}

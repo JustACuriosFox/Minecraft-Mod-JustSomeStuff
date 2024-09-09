@@ -4,8 +4,9 @@ import net.justacuriosfox.justsomestuff.JustSomeStuffMod;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentTarget;
 import net.minecraft.entity.EquipmentSlot;
+import net.minecraft.registry.Registries;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.registry.Registry;
+import net.minecraft.registry.Registry;
 
 public class ModEnchantements {
     public static Enchantment AFFECTING = register("affecting",
@@ -25,7 +26,7 @@ public class ModEnchantements {
                     EnchantmentTarget.BREAKABLE, EquipmentSlot.MAINHAND));
 
     private static Enchantment register(String name, Enchantment enchantment) {
-        return Registry.register(Registry.ENCHANTMENT, new Identifier(JustSomeStuffMod.MOD_ID, name), enchantment);
+        return Registry.register(Registries.ENCHANTMENT, new Identifier(JustSomeStuffMod.MOD_ID, name), enchantment);
     }
 
     public static void registerModEnchantments() {

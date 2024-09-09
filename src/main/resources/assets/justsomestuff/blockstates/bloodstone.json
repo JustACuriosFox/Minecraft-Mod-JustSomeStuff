@@ -1,0 +1,21 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "justsomestuff:block/bloodstone"
+      },
+      {
+        "model": "justsomestuff:block/bloodstone",
+        "y": 90
+      },
+      {
+        "model": "justsomestuff:block/bloodstone",
+        "y": 180
+      },
+      {
+        "model": "justsomestuff:block/bloodstone",
+        "y": 270
+      }
+    ]
+  }
+}

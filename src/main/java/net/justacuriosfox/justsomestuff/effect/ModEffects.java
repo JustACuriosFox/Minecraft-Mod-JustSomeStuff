@@ -3,8 +3,9 @@ package net.justacuriosfox.justsomestuff.effect;
 import net.justacuriosfox.justsomestuff.JustSomeStuffMod;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectCategory;
+import net.minecraft.registry.Registries;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.registry.Registry;
+import net.minecraft.registry.Registry;
 
 public class ModEffects {
     public static StatusEffect ALCOHOL_POISONING = registerStatusEffect("alcohol_poisoning",
@@ -22,7 +23,7 @@ public class ModEffects {
             ));
 
     public static StatusEffect registerStatusEffect(String name, StatusEffect effect) {
-        return Registry.register(Registry.STATUS_EFFECT, new Identifier(JustSomeStuffMod.MOD_ID, name), effect);
+        return Registry.register(Registries.STATUS_EFFECT, new Identifier(JustSomeStuffMod.MOD_ID, name), effect);
     }
 
     public static void registerEffects() {

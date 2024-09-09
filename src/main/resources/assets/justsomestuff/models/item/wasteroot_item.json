@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "justsomestuff:item/wasteroot_item"
+  }
+}

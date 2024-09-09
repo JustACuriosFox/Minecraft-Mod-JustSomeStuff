@@ -16,7 +16,7 @@ public class LifestealEnchantment extends Enchantment {
 
     @Override
     public void onTargetDamaged(LivingEntity user, Entity target, int level) {
-        if(!user.world.isClient()) {
+        if(!user.getWorld().isClient()) {
             user.heal(0.34f*level);
         }
         super.onTargetDamaged(user, target, level);

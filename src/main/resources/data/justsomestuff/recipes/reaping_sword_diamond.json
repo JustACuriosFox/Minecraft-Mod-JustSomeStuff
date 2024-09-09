@@ -2,24 +2,18 @@
   "type": "minecraft:crafting_shaped",
   "pattern": [
     "GUG",
-    "#O#",
-    "SOS"
+    " O ",
+    " O "
   ],
   "key": {
     "U": {
       "item": "minecraft:nether_star"
     },
     "O": {
-      "item": "minecraft:stick"
-    },
-    "#": {
-      "item": "minecraft:dragon_breath"
+      "item": "justsomestuff:wasteroot_handle"
     },
     "G": {
-      "item": "minecraft:diamond"
-    },
-    "S": {
-      "item": "minecraft:end_crystal"
+      "item": "justsomestuff:wasteroot_blade"
     }
   },
   "result": {

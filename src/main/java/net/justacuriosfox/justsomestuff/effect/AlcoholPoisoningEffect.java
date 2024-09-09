@@ -5,7 +5,7 @@ import net.minecraft.entity.effect.StatusEffectCategory;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
-import net.minecraft.text.LiteralText;
+import net.minecraft.text.Text;
 import net.minecraft.util.Util;
 
 public class AlcoholPoisoningEffect extends StatusEffect {
@@ -15,11 +15,11 @@ public class AlcoholPoisoningEffect extends StatusEffect {
 
     @Override
     public void applyUpdateEffect(LivingEntity pLivingEntity, int pAmplifier) {
-        if (!pLivingEntity.world.isClient()) {
+        if (!pLivingEntity.getWorld().isClient()) {
             if (pLivingEntity.isAlive()) {
                 if (pAmplifier >= 30) {
                     pLivingEntity.kill();
-                    pLivingEntity.sendSystemMessage(new LiteralText("You drank too much alcohol and died of Alcohol poisoning."), Util.NIL_UUID);
+                    pLivingEntity.sendMessage(Text.literal("You drank too much alcohol and died of Alcohol poisoning."));
                     pLivingEntity.removeStatusEffect(ModEffects.ALCOHOL_POISONING);
                 }
 

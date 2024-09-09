@@ -17,7 +17,7 @@ public class YeetEnchantment extends Enchantment {
 
     @Override
     public void onTargetDamaged(LivingEntity user, Entity target, int level) {
-        if (!user.world.isClient()) {
+        if (!user.getWorld().isClient()) {
             LivingEntity Ltarget = (LivingEntity) target;
             Ltarget.setVelocity(new Vec3d(Ltarget.getVelocity().x, .5*level, Ltarget.getVelocity().z));
         }

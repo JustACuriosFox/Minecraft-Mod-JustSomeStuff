@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#Q#",
+    "Q/Q",
+    "#Q#"
+  ],
+  "key": {
+    "#": {
+      "item": "justsomestuff:blood_orb"
+    },
+    "Q": {
+      "item": "minecraft:diamond"
+    },
+    "/": {
+      "item": "minecraft:end_crystal"
+    }
+  },
+  "result": {
+    "item": "justsomestuff:wasteroot_blade",
+    "count": 1
+  }
+}

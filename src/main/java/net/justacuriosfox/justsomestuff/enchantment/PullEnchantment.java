@@ -16,7 +16,7 @@ public class PullEnchantment extends Enchantment {
 
     @Override
     public void onTargetDamaged(LivingEntity user, Entity target, int level) {
-        if (!user.world.isClient()){
+        if (!user.getWorld().isClient()){
             double x = target.getX() - user.getX();
             double z = target.getZ() - user.getZ();
             x = (x * -0.05) * level;

@@ -11,7 +11,7 @@ public class DrunkEffect extends StatusEffect {
 
     @Override
     public void applyUpdateEffect(LivingEntity entity, int amplifier) {
-        if (entity.world.isClient()) {
+        if (entity.getWorld().isClient()) {
             if (Math.random() > (0.9 - (amplifier * .1))) {
                 entity.addVelocity(Math.random() / 2 - .25, 0,  Math.random() / 2 -.25);
                 float randomF = (float) Math.random();

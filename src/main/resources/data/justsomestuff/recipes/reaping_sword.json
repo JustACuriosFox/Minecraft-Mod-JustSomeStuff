@@ -1,12 +1,23 @@
 {
-  "type": "minecraft:smithing",
-  "base": {
-    "item": "justsomestuff:reaping_sword"
-  },
-  "addition": {
-    "item": "minecraft:netherite_ingot"
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#N#",
+    "NBN",
+    "#N#"
+  ],
+  "key": {
+    "#": {
+      "item": "justsomestuff:enhanced_wasteroot"
+    },
+    "N": {
+      "item": "minecraft:netherite_scrap"
+    },
+    "B": {
+      "item": "justsomestuff:reaping_sword"
+    }
   },
   "result": {
-    "item": "justsomestuff:reaping_sword_upgrade"
+    "item": "justsomestuff:reaping_sword_upgrade",
+    "count": 1
   }
 }

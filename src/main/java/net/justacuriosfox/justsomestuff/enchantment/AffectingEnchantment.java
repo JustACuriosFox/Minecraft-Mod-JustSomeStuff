@@ -18,7 +18,7 @@ public class AffectingEnchantment extends Enchantment {
 
     @Override
     public void onTargetDamaged(LivingEntity user, Entity target, int level) {
-        if(!user.world.isClient()) {
+        if(!user.getWorld().isClient()) {
             LivingEntity Ltarget = (LivingEntity) target;
             Collection<StatusEffectInstance> effects = user.getStatusEffects();
             for (StatusEffectInstance i : effects) {

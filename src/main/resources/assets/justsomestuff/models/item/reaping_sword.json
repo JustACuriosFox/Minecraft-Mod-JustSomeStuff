@@ -1,28 +1,111 @@
 {
-  "parent": "item/generated",
-  "textures": {
-    "layer0": "justsomestuff:item/weapons/reaping_sword"
-  },
+  "credit": "Made with Blockbench",
+  "parent": "builtin/entity",
+  "texture_size": [
+    32,
+    32
+  ],
   "display": {
     "thirdperson_righthand": {
-      "rotation": [ 0, -90, 55 ],
-      "translation": [ 0, 4.0, 0.5 ],
-      "scale": [ 1, 1, 1 ]
+      "rotation": [
+        -177.44,
+        2.76,
+        -178.87
+      ],
+      "translation": [
+        0.5,
+        0,
+        2
+      ]
     },
     "thirdperson_lefthand": {
-      "rotation": [ 0, 90, -55 ],
-      "translation": [ 0, 4.0, 0.5 ],
-      "scale": [ 1, 1, 1 ]
+      "rotation": [
+        178.81,
+        1.59,
+        -179.34
+      ],
+      "translation": [
+        -0.5,
+        0,
+        2
+      ]
     },
     "firstperson_righthand": {
-      "rotation": [ 0, -90, 25 ],
-      "translation": [ 1.13, 3.2, 1.13 ],
-      "scale": [ 0.68, 0.68, 0.68 ]
+      "rotation": [
+        171.25,
+        -4.25,
+        -180
+      ],
+      "translation": [
+        1.75,
+        -4,
+        0
+      ]
     },
     "firstperson_lefthand": {
-      "rotation": [ 0, 90, -25 ],
-      "translation": [ 1.13, 3.2, 1.13 ],
-      "scale": [ 0.68, 0.68, 0.68 ]
+      "rotation": [
+        175.75,
+        -8.5,
+        180
+      ],
+      "translation": [
+        2.25,
+        -4.75,
+        0
+      ]
+    },
+    "ground": {
+      "rotation": [
+        9.25,
+        -19.93,
+        -95.72
+      ],
+      "translation": [
+        -6,
+        0,
+        -6
+      ]
+    },
+    "gui": {
+      "rotation": [
+        90,
+        55.5,
+        -90
+      ],
+      "translation": [
+        -6.5,
+        -4.5,
+        0
+      ],
+      "scale": [
+        0.71,
+        0.72,
+        0.72
+      ]
+    },
+    "head": {
+      "rotation": [
+        31,
+        0,
+        0
+      ],
+      "translation": [
+        0,
+        -5.25,
+        -16.25
+      ]
+    },
+    "fixed": {
+      "rotation": [
+        89.6,
+        -49.24,
+        89.79
+      ],
+      "translation": [
+        9,
+        -6.5,
+        -0.75
+      ]
     }
   }
 }

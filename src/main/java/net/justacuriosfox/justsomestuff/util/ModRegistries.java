@@ -3,11 +3,8 @@ package net.justacuriosfox.justsomestuff.util;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 import net.fabricmc.fabric.api.object.builder.v1.trade.TradeOfferHelper;
 import net.justacuriosfox.justsomestuff.enchantment.ModEnchantements;
-import net.justacuriosfox.justsomestuff.entity.ModEntities;
-import net.justacuriosfox.justsomestuff.entity.custom.PoliceEntity;
 import net.justacuriosfox.justsomestuff.item.ModItems;
 import net.justacuriosfox.justsomestuff.villager.ModVillagers;
-import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentLevelEntry;
 import net.minecraft.item.EnchantedBookItem;
 import net.minecraft.item.ItemStack;
@@ -22,7 +19,7 @@ public class ModRegistries {
     }
 
     private static void registerAttributes() {
-        FabricDefaultAttributeRegistry.register(ModEntities.POLICE, PoliceEntity.setAttributes());
+
     }
 
     private static void registerCustomTrades() {

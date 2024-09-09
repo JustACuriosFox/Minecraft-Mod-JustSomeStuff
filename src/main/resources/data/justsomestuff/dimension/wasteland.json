@@ -1,0 +1,11 @@
+{
+  "type": "justsomestuff:wasteland",
+  "generator": {
+    "type": "minecraft:noise",
+    "settings": "justsomestuff:wasteland",
+    "biome_source": {
+      "type": "minecraft:fixed",
+      "biome": "justsomestuff:wasted"
+    }
+  }
+}
