@@ -1,0 +1,27 @@
+{
+  "display": {
+    "icon": {
+      "item": "justsomestuff:wasteroot_item"
+    },
+    "title": "Where is its tree?",
+    "description": "Find a wasteroot in the wasteland.",
+    "frame": "task",
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "justsomestuff:wasteland/root",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "justsomestuff:wasteroot_item"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

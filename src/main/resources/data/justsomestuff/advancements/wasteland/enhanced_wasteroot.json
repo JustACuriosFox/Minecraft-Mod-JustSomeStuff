@@ -1,0 +1,27 @@
+{
+  "display": {
+    "icon": {
+      "item": "justsomestuff:enhanced_wasteroot"
+    },
+    "title": "Why?",
+    "description": "I might have been a bit uncreative with the textures (craft an enhanced wasteroot)",
+    "frame": "goal",
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "parent": "justsomestuff:wasteland/wasteroot_item",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "justsomestuff:enhanced_wasteroot"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

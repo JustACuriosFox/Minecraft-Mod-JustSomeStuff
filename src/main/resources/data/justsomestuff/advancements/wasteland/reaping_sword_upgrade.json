@@ -1,0 +1,28 @@
+{
+  "display": {
+    "icon": {
+      "item": "justsomestuff:reaping_sword_upgrade"
+    },
+    "title": "Truly unlimited Power (still, not really)",
+    "description": "Upgrade your Reaper's Scythe",
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "parent": "justsomestuff:wasteland/reaping_sword",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "justsomestuff:reaping_sword_upgrade"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

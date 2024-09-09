@@ -1,0 +1,27 @@
+{
+  "display": {
+    "icon": {
+      "item": "justsomestuff:blood_orb"
+    },
+    "title": "It's wet?!",
+    "description": "Find a blood orb in the wasteland.",
+    "frame": "task",
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "justsomestuff:wasteland/root",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "justsomestuff:blood_orb"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

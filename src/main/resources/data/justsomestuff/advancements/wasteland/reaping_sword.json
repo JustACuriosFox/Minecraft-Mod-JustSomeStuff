@@ -1,0 +1,28 @@
+{
+  "display": {
+    "icon": {
+      "item": "justsomestuff:reaping_sword"
+    },
+    "title": "Unlimited Power! (not really)",
+    "description": "Get Yourself a Reaper's Scythe.",
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "justsomestuff:wasteland/enhanced_wasteroot",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "justsomestuff:reaping_sword"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}
