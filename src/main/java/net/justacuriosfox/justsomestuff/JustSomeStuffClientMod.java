@@ -23,6 +23,9 @@ public class JustSomeStuffClientMod implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.HOP_CROP, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.LSDFURNACE, RenderLayer.getCutout());
 
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.ASHEN_LEAVES, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.ASHEN_SAPLING, RenderLayer.getCutout());
+
         HudRenderCallback.EVENT.register(new DrunkHudOverlay());
 
         EntityRendererRegistry.register(ModEntities.BLOOD_LEACH, BloodLeachRenderer::new);

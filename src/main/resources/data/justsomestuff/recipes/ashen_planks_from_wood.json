@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "justsomestuff:ashen_wood"
+    }
+  ],
+  "result": {
+    "item": "justsomestuff:ashen_planks",
+    "count": 4
+  }
+}

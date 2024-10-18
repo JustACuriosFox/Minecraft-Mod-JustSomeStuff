@@ -1,0 +1,6 @@
+// 1.20.1	2024-10-14T21:53:49.9206267	Just Some Things/Tags for minecraft:block
+6318c3b6722bc993d408c1b6c30600a37d3922be data\minecraft\tags\blocks\mineable\shovel.json
+1363670cf14e955c894d3e1ee8ba966587f524c6 data\minecraft\tags\blocks\needs_diamond_tool.json
+0ebcc706db8aaa0a295493a9b2c172d201ba499f data\minecraft\tags\blocks\mineable\pickaxe.json
+e5a048fe4f0dc7dd79cd2cc07db13cf507f72b60 data\minecraft\tags\blocks\needs_iron_tool.json
+64f7dc3aaa5a6defbd4c0a34bd75721ed71f9f3f data\minecraft\tags\blocks\needs_stone_tool.json

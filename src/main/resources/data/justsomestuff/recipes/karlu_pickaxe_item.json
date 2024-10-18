@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "J#J",
+    " O ",
+    " O "
+  ],
+  "key": {
+    "O": {
+      "item": "minecraft:stick"
+    },
+    "#": {
+      "item": "minecraft:iron_ingot"
+    },
+    "J": {
+      "item": "minecraft:leather"
+    }
+  },
+  "result": {
+    "item": "justsomestuff:karlu_pickaxe_item",
+    "count": 1
+  }
+}

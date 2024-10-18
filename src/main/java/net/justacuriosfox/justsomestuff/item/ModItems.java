@@ -3,6 +3,7 @@ package net.justacuriosfox.justsomestuff.item;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.justacuriosfox.justsomestuff.JustSomeStuffMod;
 import net.justacuriosfox.justsomestuff.block.ModBlocks;
+import net.justacuriosfox.justsomestuff.item.custom.KarluPickaxeItem;
 import net.justacuriosfox.justsomestuff.item.custom.ReapingSwordItem;
 import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
@@ -11,13 +12,18 @@ import net.minecraft.registry.Registry;
 
 public class ModItems {
     public static final ReapingSwordItem REAPING_SWORD = (ReapingSwordItem) registerItem("reaping_sword",
-            new ReapingSwordItem(ToolMaterials.NETHERITE, 5, -2.4F, new FabricItemSettings()
+            new ReapingSwordItem(ToolMaterials.DIAMOND, 5, -2.4F, new FabricItemSettings()
+                    .maxCount(1)
+            ));
+    public static final ReapingSwordItem REAPING_SWORD_UPGRADE = (ReapingSwordItem) registerItem("reaping_sword_upgrade",
+            new ReapingSwordItem(ToolMaterials.NETHERITE, 16, -2.4F, new FabricItemSettings()
                     .maxCount(1)
                     .fireproof()
             ));
-    public static final ReapingSwordItem REAPING_SWORD_UPGRADE = (ReapingSwordItem) registerItem("reaping_sword_upgrade",
-            new ReapingSwordItem(ToolMaterials.DIAMOND, 16, -2.4F, new FabricItemSettings()
+    public static final KarluPickaxeItem KARLU_PICKAXE_ITEM = (KarluPickaxeItem) registerItem("karlu_pickaxe_item",
+            new KarluPickaxeItem(ToolMaterials.IRON, 2, 6f, new FabricItemSettings()
                     .maxCount(1)
+                    .maxDamage(100)
             ));
     public static final Item HOP_JUICE = registerItem("hop_juice",
             new Item(new FabricItemSettings()

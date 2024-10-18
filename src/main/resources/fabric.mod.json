@@ -7,7 +7,6 @@
   "description": "Just adds some things.",
   "authors": [
     "JustACuriosFox",
-    "Sharko770",
     "DerHades99"
   ],
   "contact": {
@@ -28,6 +27,9 @@
     ],
     "fabric-datagen": [
       "net.justacuriosfox.justsomestuff.JustSomeStuffDataGenerator"
+    ],
+    "terrablender": [
+      "net.justacuriosfox.justsomestuff.world.biome.ModTerrablenderAPI"
     ]
   },
   "mixins": [

@@ -2,6 +2,7 @@ package net.justacuriosfox.justsomestuff;
 
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
+import net.fabricmc.fabric.api.registry.StrippableBlockRegistry;
 import net.justacuriosfox.justsomestuff.block.ModBlocks;
 import net.justacuriosfox.justsomestuff.effect.ModEffects;
 import net.justacuriosfox.justsomestuff.enchantment.ModEnchantements;
@@ -37,5 +38,8 @@ public class JustSomeStuffMod implements ModInitializer {
 		ModScreenHandlers.registerAllScreenHandlers();
 		ModDimensions.register();
 		FabricDefaultAttributeRegistry.register(ModEntities.BLOOD_LEACH, BloodLeachEntity.createBloodLeachAttributes());
+
+		StrippableBlockRegistry.register(ModBlocks.ASHEN_LOG, ModBlocks.STRIPPED_ASHEN_LOG);
+		StrippableBlockRegistry.register(ModBlocks.ASHEN_WOOD, ModBlocks.STRIPPED_ASHEN_WOOD);
 	}
 }

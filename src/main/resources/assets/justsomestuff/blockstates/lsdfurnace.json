@@ -1,8 +1,0 @@
-{
-  "variants": {
-    "facing=north": {"model": "justsomestuff:block/lsdfurnace"},
-    "facing=east": {"model": "justsomestuff:block/lsdfurnace", "y": 90},
-    "facing=south": {"model": "justsomestuff:block/lsdfurnace" ,"y": 180},
-    "facing=west": {"model": "justsomestuff:block/lsdfurnace", "y": 270}
-  }
-}

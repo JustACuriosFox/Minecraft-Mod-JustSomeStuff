@@ -11,9 +11,11 @@
   "item.justsomestuff.reaping_sword_upgrade": "Upgraded Reaper's Scythe",
   "item.justsomestuff.blood_orb": "Blood Orb",
   "item.justsomestuff.enhanced_wasteroot": "Enhanced Wasteroot",
-  "itemGroup.justsomestuff.weapons": "JustSomeStuff Weapons",
-  "itemGroup.justsomestuff.alcohol": "JustSomeStuff Alcohol",
+  "item.justsomestuff.karlu_pickaxe_item": "Sharko Glass Breaker",
+  "itemGroup.justsomestuff.weapons": "JustSomeThings Weapons",
+  "itemGroup.justsomestuff.alcohol": "JustSomeThings Alcohol",
   "itemGroup.justsomestuff.wasteland_items": "Wasteland Items",
+  "itemGroup.justsomestuff.tools": "JustSomeThings Tools",
   "enchantment.justsomestuff.affecting": "Affecting",
   "enchantment.justsomestuff.lifesteal": "Lifesteal",
   "enchantment.justsomestuff.yeet": "Yeet",
@@ -27,5 +29,12 @@
   "item.justsomestuff.wasteroot_blade": "Wasted Blade",
   "item.justsomestuff.wasteroot_handle": "Wasted Handle",
   "block.justsomestuff.wastegrass": "Wastegrass",
-  "block.justsomestuff.bloodstone": "Bloodstone"
+  "block.justsomestuff.bloodstone": "Bloodstone",
+  "block.justsomestuff.stripped_ashen_log": "Stripped Ashen Log",
+  "block.justsomestuff.stripped_ashen_wood": "Stripped Ashen Wood",
+  "block.justsomestuff.ashen_log": "Ashen Log",
+  "block.justsomestuff.ashen_wood": "Ashen Wood",
+  "block.justsomestuff.ashen_leaves": "Ashen Leaves",
+  "block.justsomestuff.ashen_planks": "Ashen Planks",
+  "block.justsomestuff.ashen_sapling": "Ashen Sapling"
 }

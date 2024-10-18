@@ -47,5 +47,19 @@ public class ModItemGroups {
                         entries.add(ModItems.BLOOD_ORB);
                         entries.add(ModItems.WASTEROOT_HANDLE);
                         entries.add(ModItems.WASTEROOT_BLADE);
+                        entries.add(ModBlocks.ASHEN_SAPLING);
+                        entries.add(ModBlocks.ASHEN_LEAVES);
+                        entries.add(ModBlocks.ASHEN_LOG);
+                        entries.add(ModBlocks.ASHEN_WOOD);
+                        entries.add(ModBlocks.STRIPPED_ASHEN_LOG);
+                        entries.add(ModBlocks.STRIPPED_ASHEN_WOOD);
+                        entries.add(ModBlocks.ASHEN_PLANKS);
+                    }).build());
+
+    public static final ItemGroup TOOLS = Registry.register(Registries.ITEM_GROUP,
+            new Identifier(JustSomeStuffMod.MOD_ID, "tools"),
+            FabricItemGroup.builder().displayName(Text.translatable("itemGroup.justsomestuff.tools"))
+                    .icon(() -> new ItemStack(ModItems.KARLU_PICKAXE_ITEM)).entries((displayContext, entries) -> {
+                        entries.add(ModItems.KARLU_PICKAXE_ITEM);
                     }).build());
 }

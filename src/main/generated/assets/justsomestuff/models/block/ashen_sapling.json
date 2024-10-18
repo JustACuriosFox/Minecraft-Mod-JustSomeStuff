@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "justsomestuff:block/ashen_sapling"
+  }
+}

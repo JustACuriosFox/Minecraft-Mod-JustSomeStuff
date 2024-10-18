@@ -2,8 +2,7 @@ package net.justacuriosfox.justsomestuff;
 
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
-import net.justacuriosfox.justsomestuff.datagen.ModPoiTagProvider;
-import net.justacuriosfox.justsomestuff.datagen.ModWorldGenerator;
+import net.justacuriosfox.justsomestuff.datagen.*;
 import net.justacuriosfox.justsomestuff.world.ModConfiguredFeatures;
 import net.justacuriosfox.justsomestuff.world.ModOrePlacement;
 import net.justacuriosfox.justsomestuff.world.ModPlacedFeatures;
@@ -18,6 +17,9 @@ public class JustSomeStuffDataGenerator implements DataGeneratorEntrypoint {
 
         pack.addProvider(ModWorldGenerator::new);
         pack.addProvider(ModPoiTagProvider::new);
+        pack.addProvider(ModModelProvider::new);
+        pack.addProvider(ModBlockTagProvider::new);
+        pack.addProvider(ModItemTagProvider::new);
     }
 
     @Override

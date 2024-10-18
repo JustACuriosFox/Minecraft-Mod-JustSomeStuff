@@ -6,9 +6,9 @@ import net.justacuriosfox.justsomestuff.JustSomeStuffMod;
 import net.justacuriosfox.justsomestuff.block.custom.HopCropBlock;
 import net.justacuriosfox.justsomestuff.block.custom.LSDFurnaceBlock;
 import net.justacuriosfox.justsomestuff.item.ModItemGroups;
-import net.minecraft.block.Block;
-import net.minecraft.block.Blocks;
-import net.minecraft.block.RootedDirtBlock;
+import net.justacuriosfox.justsomestuff.world.tree.AshenSaplingGenerator;
+import net.justacuriosfox.justsomestuff.world.tree.MagmaSaplingGenerator;
+import net.minecraft.block.*;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
@@ -27,7 +27,7 @@ public class ModBlocks {
 
     public static final Block HOP_CROP = registerBlockWithoutBlockItem("hop_crop",
             new HopCropBlock(FabricBlockSettings
-                    .copy(Blocks.SWEET_BERRY_BUSH).nonOpaque())
+                    .copyOf(Blocks.WHEAT))
             , ModItemGroups.ALCOHOL);
     public static final Block LSDFURNACE = registerBlock("lsdfurnace",
             new LSDFurnaceBlock(FabricBlockSettings.create()
@@ -54,6 +54,41 @@ public class ModBlocks {
             new Block(FabricBlockSettings.copyOf(Blocks.STONE)
                     .requiresTool()
                     .strength(1.0f))
+
+
+            , ModItemGroups.WASTELAND_ITEMS);
+    public static final Block ASHEN_LOG = registerBlock("ashen_log",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG)
+                    .strength(4.0f))
+            , ModItemGroups.WASTELAND_ITEMS);
+    public static final Block ASHEN_WOOD = registerBlock("ashen_wood",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_WOOD)
+                    .strength(4.0f))
+            , ModItemGroups.WASTELAND_ITEMS);
+    public static final Block STRIPPED_ASHEN_LOG = registerBlock("stripped_ashen_log",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.STRIPPED_OAK_LOG)
+                    .strength(4.0f))
+            , ModItemGroups.WASTELAND_ITEMS);
+    public static final Block STRIPPED_ASHEN_WOOD = registerBlock("stripped_ashen_wood",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.STRIPPED_OAK_WOOD)
+                    .strength(4.0f))
+            , ModItemGroups.WASTELAND_ITEMS);
+
+    public static final Block ASHEN_PLANKS = registerBlock("ashen_planks",
+            new Block(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)
+                    .strength(4.0f))
+            , ModItemGroups.WASTELAND_ITEMS);
+    public static final Block ASHEN_LEAVES = registerBlock("ashen_leaves",
+            new LeavesBlock(FabricBlockSettings.copyOf(Blocks.OAK_LEAVES)
+                    .strength(4.0f)
+                    .nonOpaque())
+            , ModItemGroups.WASTELAND_ITEMS);
+
+    public static final Block ASHEN_SAPLING = registerBlock("ashen_sapling",
+            new SaplingBlock(new AshenSaplingGenerator(), FabricBlockSettings.copyOf(Blocks.OAK_SAPLING))
+            , ModItemGroups.WASTELAND_ITEMS);
+    public static final Block MAGMA_SAPLING = registerBlock("magma_sapling",
+            new SaplingBlock(new MagmaSaplingGenerator(), FabricBlockSettings.copyOf(Blocks.OAK_SAPLING))
             , ModItemGroups.WASTELAND_ITEMS);
 
     private static Block registerBlock(String name, Block block, ItemGroup group, String tooltipKey) {

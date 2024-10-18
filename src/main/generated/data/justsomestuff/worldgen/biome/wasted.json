@@ -29,7 +29,8 @@
     [],
     [],
     [
-      "minecraft:patch_dead_bush_badlands"
+      "minecraft:patch_dead_bush",
+      "minecraft:patch_dead_bush_2"
     ]
   ],
   "has_precipitation": true,
@@ -44,5 +45,5 @@
     "water_ambient": [],
     "water_creature": []
   },
-  "temperature": 0.7
+  "temperature": 1.0
 }

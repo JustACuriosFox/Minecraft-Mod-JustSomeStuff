@@ -382,7 +382,7 @@
         "then_run": {
           "type": "minecraft:block",
           "result_state": {
-            "Name": "justsomestuff:wastegrass"
+            "Name": "minecraft:grass_block"
           }
         }
       },
